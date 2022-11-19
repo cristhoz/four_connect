@@ -34,7 +34,15 @@ javafx {
 }
 
 dependencies {
+    // Dependencies
+    implementation('org.apache.commons:commons-configuration2:2.8.0')
+    implementation('commons-beanutils:commons-beanutils:1.9.4')
+    implementation('org.projectlombok:lombok:1.18.24')
 
+    // Annotations
+    annotationProcessor('org.projectlombok:lombok:1.18.24')
+
+    // Tests
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
