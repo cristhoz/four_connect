@@ -1,23 +1,21 @@
 package dev.delahoz.four_connect;
 
 import dev.delahoz.four_connect.config.properties.Properties;
+import dev.delahoz.four_connect.route.Router;
+import dev.delahoz.four_connect.route.Routes;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class FourConnectApplication extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) {
         Properties properties = new Properties();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(FourConnectApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), properties.getScreenConfig().getViewSize().getWidth(),
-            properties.getScreenConfig().getViewSize().getHeight());
         stage.setTitle(properties.getScreenConfig().getTitle());
-        stage.setScene(scene);
+
+        Router.setStage(stage);
+        Router.setRoute(Routes.Home);
+
         stage.show();
     }
 

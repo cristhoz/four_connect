@@ -6,6 +6,8 @@ module dev.delahoz.four_connect {
     requires java.sql;
 
 
-    opens dev.delahoz.four_connect to javafx.fxml;
     exports dev.delahoz.four_connect;
+    opens dev.delahoz.four_connect to javafx.fxml;
+    exports dev.delahoz.four_connect.controllers;
+    opens dev.delahoz.four_connect.controllers to javafx.fxml;
 }
