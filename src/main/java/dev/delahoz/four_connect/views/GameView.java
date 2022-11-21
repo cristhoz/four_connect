@@ -8,9 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
-public class GameView implements Views {
-    private final Scene scene;
-
+public class GameView extends Views {
     public GameView() {
         Properties properties = new Properties();
 
@@ -23,9 +21,5 @@ public class GameView implements Views {
         layout.getChildren().addAll(label, button);
 
         scene = new Scene(layout, properties.getScreenConfig().getViewSize().getWidth(), properties.getScreenConfig().getViewSize().getHeight());
-    }
-
-    public Scene getScene() {
-        return scene;
     }
 }

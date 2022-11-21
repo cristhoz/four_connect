@@ -8,9 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
-public class ResultView implements Views {
-    private final Scene scene;
-
+public class ResultView extends Views {
     public ResultView() {
         Properties properties = new Properties();
 
@@ -25,10 +23,5 @@ public class ResultView implements Views {
         layout.getChildren().addAll(label, buttonOne, buttonTwo);
 
         scene = new Scene(layout, properties.getScreenConfig().getViewSize().getWidth(), properties.getScreenConfig().getViewSize().getHeight());
-
-    }
-
-    public Scene getScene() {
-        return scene;
     }
 }
